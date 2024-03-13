@@ -18,7 +18,7 @@
                           <div class="e1">
                               Fecha <input type = 'date' name = 'Fecha'>
                               hora <input type = 'time' name = 'Time'>   
-                              <!--<!--  Estado <input type = 'text' name = 'Inventario' pattern="[^a-zA-Z]+" oninput="this.value = this.value.replace(/[^0-9]/g, '');" >  --><
+                              <!--  Estado <input type = 'text' name = 'Inventario' pattern="[^a-zA-Z]+" oninput="this.value = this.value.replace(/[^0-9]/g, '');" >  -->
                               Estado<select name="Estado" required>
                                   <option value="Lleno">Lleno</option>
                                   <option value="Vacio">Vacio</option>
