@@ -34,7 +34,7 @@
                         <a tabindex="2" aria-label="Menu desplegable" class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Otros</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                            <li><a class="dropdown-item" href="Vistas/estadistica.html">Estadistica De Residuos</a></li>
+                            <li><a class="dropdown-item" href="VistaReportes/VerReportes.jsp">Reportes</a></li>
                             <li>
                                 <hr class="dropdown-divider" />
                             </li>
@@ -408,7 +408,7 @@
                             <path onclick="mostrarCuadroTexto('Estacionamiento de Motocicletas', ['Images/ImagenesCUT/Cargando.jpeg'],'',false)" ondblclick="ocultarCuadroTexto()" d="M10047 4696 c-42 -28 -78 -55 -78 -59 -1 -5 33 -64 75 -133 l77 -124 89 60 90 60 -77 113 c-42 61 -81 117 -87 123 -8 9 -31 -2 -89 -40z"/>
                             <path onclick="mostrarCuadroTexto('Huerto Comunitario', ['Images/ImagenesCUT/Huerto.png'],'',false)" ondblclick="ocultarCuadroTexto()" d="M3220 4405 l0 -155 120 0 120 0 0 155 0 155 -120 0 -120 0 0 -155z"/>
                         </g>
-    
+                        
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
                             fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Botes de Reciclaje', [img_papel, img_inorganicos, img_organicos,img_plasticos],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Inorganicos', 'Organicos','Plasticos'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7053 6375 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
@@ -485,7 +485,7 @@
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                           fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M6323 4095 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
@@ -503,11 +503,11 @@
                             <path class="point" d="M6453 2825 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18 38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Vidrio','Plasticos','Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote sss'), grafica(['Vidrio','Plasticos','Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7823 2985 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18 38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal],'Puedes reciclar este tipo de residuos', true),grafica(['Papel', 'Metal'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal],'Puedes reciclar este tipo de residuos', true, 'Bote Medicina'),grafica(['Papel', 'Metal'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7993 2985 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18 38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                     </svg>
@@ -521,8 +521,24 @@
         </div>
 
         <div id="cuadroreporte" class="cuadroreporte">
-
-            <a href="VistaReportes/Reportes.jsp" > <img src="https://static.vecteezy.com/system/resources/previews/012/042/292/original/warning-sign-icon-transparent-background-png.png" alt="alt" width="100%" height="100%"/><a/>
+                <form method="post" name = "Reportar" action = "/MpResiduos/MdReportes">                             
+                          <div class="e1">                           
+                                <input type="text" id="ub" readonly />
+                                                                                        
+                              Lleno<input type="radio" id="" name="Estado" value="Lleno">
+                               Dañado<input type="radio" id="" name="Estado" value="Dan ado">
+                                Basura Mezclada<input type="radio" id="" name="Estado" value="Basura Mezclada">
+                              
+                              
+                          </div>                                
+                          
+                          <div class="AccionesR" >
+                              <button type="submit">Reportar</button>  
+                              
+                          </div>     
+                          
+                     </form>   
+           
         </div>
            
           

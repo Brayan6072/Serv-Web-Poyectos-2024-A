@@ -12,16 +12,16 @@ public class Reporte {
     private int id;
           private String fecha;
           private String hora;
-          private int id_estado;
+          private String estado;
           private String EtiquetaU;
           
    public Reporte (){}    
 
-    public Reporte(int id, String fecha, String hora, int id_estado, String EtiquetaU) {
+    public Reporte(int id, String fecha, String hora, String estado, String EtiquetaU) {
         this.id = id;
         this.fecha = fecha;
         this.hora = hora;
-        this.id_estado = id_estado;
+        this.estado = estado;
         this.EtiquetaU = EtiquetaU;
     }
 
@@ -49,12 +49,12 @@ public class Reporte {
         this.hora = hora;
     }
 
-    public int getId_estado() {
-        return id_estado;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setId_estado(int id_estado) {
-        this.id_estado = id_estado;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getEtiquetaU() {
@@ -64,5 +64,7 @@ public class Reporte {
     public void setEtiquetaU(String EtiquetaU) {
         this.EtiquetaU = EtiquetaU;
     }
+
+    
    
 }

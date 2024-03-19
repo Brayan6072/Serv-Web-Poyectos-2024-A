@@ -50,20 +50,18 @@ public class MdReportes extends HttpServlet {
                  String time = horaFormateada;
                  String estado = request.getParameter("Estado");
                  String etiqueta = request.getParameter("EtiquetaU");
-                 int ide =0;
-                if("Lleno".equals(estado)){
-                    ide = 1;
-                }
                 
-          
+            
+                
+         
           Reporte rpt = new Reporte();
            
-            
+         
                    
             rpt.setFecha(date);
             rpt.setHora(time);           
             rpt.setEtiquetaU(etiqueta); 
-            rpt.setId_estado(ide);
+            rpt.setEstado(estado);
             
             int estatus = AccionReporte.IngresarReporte(rpt);
             
