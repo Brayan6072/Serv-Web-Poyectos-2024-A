@@ -63,7 +63,7 @@ public class AccionReporte {
                         lista.add(rpt);
                     }
                     
-                    System.out.println("Estos son todos los alumnos");
+                    System.out.println("Estos son todos los reportes");
                     con.close();
                     
                 }catch(Exception ed){

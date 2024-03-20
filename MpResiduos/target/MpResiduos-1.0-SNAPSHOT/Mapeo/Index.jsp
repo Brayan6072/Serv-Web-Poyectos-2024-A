@@ -11,14 +11,13 @@
     <title>Mapa Interactivo del Cutonala</title>
 
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-
+    <link rel="stylesheet" href="css/Botones.css"/>
     <link href="css/mapa.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/graficos.css" rel="stylesheet" />
     <script src="js/scripts.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="js/puntero.js"></script>
-    
+    <!--     <script src="js/puntero.js"></script>  Desvanecido de punteros -->
 </head>
 
 <body>
@@ -410,104 +409,104 @@
                         </g>
                         
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Botes de Reciclaje', [img_papel, img_inorganicos, img_organicos,img_plasticos],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Inorganicos', 'Organicos','Plasticos'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Botes de Reciclaje', [img_papel, img_inorganicos, img_organicos,img_plasticos],'Puedes reciclar este tipo de residuos', true, 'Bote M'), grafica(['Papel', 'Inorganicos', 'Organicos','Plasticos'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7053 6375 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote Q'), grafica(['Papel', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M5753 6285 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_vidrio, img_metal, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Plasticos','Vidrio', 'Metal', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_vidrio, img_metal, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote H'), grafica(['Plasticos','Vidrio', 'Metal', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7563 5715 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote L'), grafica(['Papel', 'Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M6993 5305 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel,img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel','Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel,img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote R'), grafica(['Papel','Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M3693 5265 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos,img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Plasticos','Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos,img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote P'), grafica(['Plasticos','Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M6193 5265 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Metal'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal],'Puedes reciclar este tipo de residuos', true, 'Bote N'), grafica(['Papel', 'Metal'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M6553 5265 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_vidrio, img_metal, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Plasticos', 'Vidrio', 'Metal', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_vidrio, img_metal, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote C'), grafica(['Plasticos', 'Vidrio', 'Metal', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M8903 5215 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote S'), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M4033 5095 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_metal, img_vidrio, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Plasticos', 'Metal', 'Vidrio', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()">
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_metal, img_vidrio, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote A'), grafica(['Plasticos', 'Metal', 'Vidrio', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()">
                             <path class="point" d="M9423 4565 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote I'), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7123 4485 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos,img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos,img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote D'), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7913 4265 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_vidrio, img_metal, img_organicos, img_papel, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Plasticos', 'Vidrio', 'Metal','Organicos','Papel', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_vidrio, img_metal, img_organicos, img_papel, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote K'), grafica(['Plasticos', 'Vidrio', 'Metal','Organicos','Papel', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M6803 4215 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Organicos', 'Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote E'), grafica(['Papel', 'Organicos', 'Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7503 4135 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote O'), grafica(['Metal', 'Vidrio', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M5313 4095 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                           fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                           fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote Ñ'), grafica(['Papel', 'Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M6323 4095 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_plasticos, img_vidrio, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Metal', 'Plasticos', 'Vidrio', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_metal, img_plasticos, img_vidrio, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote T'), grafica(['Metal', 'Plasticos', 'Vidrio', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M3483 4005 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18
                             38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_papel, img_metal, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Plasticos', 'Papel', 'Metal', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_plasticos, img_papel, img_metal, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote B'), grafica(['Plasticos', 'Papel', 'Metal', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M9103 5455 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18 38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true), grafica(['Papel', 'Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_organicos, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote J'), grafica(['Papel', 'Organicos', 'Plasticos', 'Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M6453 2825 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18 38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote sss'), grafica(['Vidrio','Plasticos','Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_vidrio, img_plasticos, img_dificil_reclaje],'Puedes reciclar este tipo de residuos', true, 'Bote F'), grafica(['Vidrio','Plasticos','Dificil Reciclaje'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7823 2985 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18 38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                         <g tabindex="7" aria-label="Estas en la capa de los botes"  class="Botes" transform="translate(0.000000,768.000000) scale(0.100000,-0.100000)"
-                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal],'Puedes reciclar este tipo de residuos', true, 'Bote Medicina'),grafica(['Papel', 'Metal'])" ondblclick="ocultarCuadroTexto()" >
+                            fill="#ee9b57" stroke="none" onclick="mostrarCuadroTexto('Bote para Reciclaje',[img_papel, img_metal],'Puedes reciclar este tipo de residuos', true, 'Bote G'),grafica(['Papel', 'Metal'])" ondblclick="ocultarCuadroTexto()" >
                             <path class="point" d="M7993 2985 c-21 -23 -15 -72 15 -114 15 -22 32 -40 37 -40 6 0 22 18 38 40 30 43 35 92 13 115 -19 18 -87 18 -103 -1z"/>
                         </g>
                     </svg>
@@ -521,14 +520,30 @@
         </div>
 
         <div id="cuadroreporte" class="cuadroreporte">
-                <form method="post" name = "Reportar" action = "/MpResiduos/MdReportes">                             
-                          <div class="e1">                           
-                                <input type="text" id="ub" readonly />
+                <form method="post" name = "Reportar" action = "/MpResiduos/MdReportes">           
+                    
+                        <input type="text" id="ub" readonly />
+                          <div class="wrapper">                           
+                                
                                                                                         
-                              Lleno<input type="radio" id="" name="Estado" value="Lleno">
-                               Dañado<input type="radio" id="" name="Estado" value="Dan ado">
-                                Basura Mezclada<input type="radio" id="" name="Estado" value="Basura Mezclada">
-                              
+                              <input type="radio" name="Estado" value="Lleno" id="option-1" checked>
+                               <input type="radio"  name="Estado" value="Dan ado" id="option-2">
+                                <input type="radio"  name="Estado" value="Basura Mezclada" id="option-3">
+                                
+                                <label for="option-1" class="option option-1">                                     
+                                    <div class="dot"></div>
+                                    <span>Lleno</span>                                
+                              </label>
+                                
+                              <label for="option-2" class="option option-2">
+                                    <div class="dot"></div>
+                                    <span>Dañado</span>
+                              </label>
+                                
+                              <label for="option-3" class="option option-3">
+                                    <div class="dot"></div>
+                                    <span>Basura Mezclada</span>
+                              </label>      
                               
                           </div>                                
                           
