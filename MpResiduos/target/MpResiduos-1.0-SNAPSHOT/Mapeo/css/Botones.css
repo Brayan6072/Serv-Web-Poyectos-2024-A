@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
 
-.wrapper{
+.wrapper, .wrappers{
   display: -webkit-inline-box;
   
   height: 100px;
@@ -10,6 +10,9 @@
   border-radius: 5px;
   padding: 20px 15px;
   box-shadow: 5px 5px 30px rgba(0,0,0,0.2);
+}
+.TpBt option:hover {
+    background-color: #31827c; 
 }
 .wrapper .option{
   

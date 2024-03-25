@@ -13,14 +13,12 @@
         <link href="../css/mapa.css" rel="stylesheet" />
         <link href="../css/styles.css" rel="stylesheet" />
         <link href="../css/graficos.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/Estilos.css"/>
         <script src="../js/scripts.js"></script>
         <title>JSP Page</title>
     </head>
-    <body>
-        
-        
-            
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <body>      
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
                         <p tabindex="1" aria-label="Titulo de la pagina" class="navbar-brand" href="#">Reportes de Botes</p>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -40,8 +38,8 @@
                     </div>
                 </nav>
                 
-            <div class="VerReporte">
-                <h1>Tabla de Alumnos</h1>
+            <div class="Consultar">
+                <h1>Reportes de Botes</h1>
                 <br>
                 <table border = "0">
                     <thead>
@@ -49,8 +47,10 @@
                             <th>Id</th>
                             <th>Fecha</th>
                             <th>Hora</th>
+                            <th>Clasificacion</th>     
                             <th>Estado</th>
-                            <th>Ubicacion</th>                            
+                            <th>Ubicacion</th>                
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -62,8 +62,9 @@
                             <td><%=rpt.getId()%></td>
                             <td><%=rpt.getFecha()%></td>
                             <td><%=rpt.getHora()%></td>
+                            <td><%=rpt.getClasificacion()%></td>
                             <td><%=rpt.getEstado()%></td>
-                            <td><%=rpt.getEtiquetaU()%></td>
+                            <td><%=rpt.getEtiquetau()%></td>
                         </tr>
                         <%
                             }

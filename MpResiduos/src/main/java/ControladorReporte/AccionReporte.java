@@ -20,14 +20,15 @@ public class AccionReporte {
             try{
                 
                 Connection con = Conexion.getConnection();
-                String ins = "INSERT INTO `notificaciones`.`reportes` (`Fecha`, `EtiquetaU`, `Hora`, `EstdBote`) VALUES  (?,?,?,?);";
+                String ins = "INSERT INTO `notificaciones`.`reportes` (`Fecha`, `EtiquetaU`, `Hora`, `EstdBote`, `Clasificacion`) VALUES (?,?,?,?,?);";
                 PreparedStatement ps = con.prepareStatement(ins);
                 
                 
                 ps.setString(1, rp.getFecha());
-                ps.setString(2, rp.getEtiquetaU());
+                ps.setString(2, rp.getEtiquetau());
                 ps.setString(3, rp.getHora());
                 ps.setString(4, rp.getEstado());
+                ps.setString(5, rp.getClasificacion());
               
                 
                 estatus = ps.executeUpdate();
@@ -57,9 +58,10 @@ public class AccionReporte {
                         Reporte rpt = new Reporte();
                         rpt.setId(rs.getInt(1));
                         rpt.setFecha(rs.getString(2));
-                        rpt.setEtiquetaU(rs.getString(3));
+                        rpt.setEtiquetau(rs.getString(3));
                         rpt.setHora(rs.getString(4));
                         rpt.setEstado(rs.getString(5));
+                        rpt.setClasificacion(rs.getString(6));
                         lista.add(rpt);
                     }
                     

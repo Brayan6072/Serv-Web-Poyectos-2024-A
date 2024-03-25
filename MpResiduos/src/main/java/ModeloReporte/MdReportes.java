@@ -50,18 +50,21 @@ public class MdReportes extends HttpServlet {
                  String time = horaFormateada;
                  String estado = request.getParameter("Estado");
                  String etiqueta = request.getParameter("EtiquetaU");
+                 String tpb = request.getParameter("TpBts");
                 
             
                 
          
           Reporte rpt = new Reporte();
            
-         
+         System.out.println("sdfsfsaf54ad6f4a54fa4fffffffffffffffffffffffffffffffffffffffffffffffff");
                    
             rpt.setFecha(date);
             rpt.setHora(time);           
-            rpt.setEtiquetaU(etiqueta); 
+            rpt.setEtiquetau(etiqueta); 
             rpt.setEstado(estado);
+            rpt.setClasificacion(tpb);
+            System.out.println(tpb);
             
             int estatus = AccionReporte.IngresarReporte(rpt);
             

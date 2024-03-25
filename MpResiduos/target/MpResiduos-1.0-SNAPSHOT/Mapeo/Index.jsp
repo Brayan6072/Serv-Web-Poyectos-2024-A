@@ -523,11 +523,16 @@
                 <form method="post" name = "Reportar" action = "/MpResiduos/MdReportes">           
                     
                         <input type="text" id="ub" readonly />
+                        <div class="wrappers"> 
+                            Tipo de Bote<select id="TpBt" name="TpBts" required>
+                              </select>
+                        </div>            
                           <div class="wrapper">                           
                                 
-                                                                                        
+                              
+                              
                               <input type="radio" name="Estado" value="Lleno" id="option-1" checked>
-                               <input type="radio"  name="Estado" value="Dan ado" id="option-2">
+                               <input type="radio"  name="Estado" value="Danado" id="option-2">
                                 <input type="radio"  name="Estado" value="Basura Mezclada" id="option-3">
                                 
                                 <label for="option-1" class="option option-1">                                     

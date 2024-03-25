@@ -16,6 +16,22 @@ function getRandomPercentage() {
   return (Math.random() * 100).toFixed(2);
 }
 
+function grafica(tpbt){
+    var tpbte = document.getElementById('TpBt');
+    
+     while (tpbte.firstChild) {
+        tpbte.removeChild(tpbte.firstChild);
+    }
+    
+    for (var i = 0; i < tpbt.length; i++) {
+        var nwop = document.createElement('option');
+        nwop.value = tpbt[i];
+        nwop.innerHTML=tpbt[i];
+        tpbte.appendChild(nwop);
+    }
+   
+    
+}
 
 function mostrarCuadroTexto(texto, imagenes, informacionAdicional, bote, ubicacion) {
   var cuadroTexto = document.getElementById('cuadroTexto');
@@ -66,6 +82,7 @@ function ocultarCuadroTexto() {
     var cuadroreporte = document.getElementById('cuadroreporte');
     cuadroTexto.style.display = 'none';
     cuadroreporte.style.display = 'none';
+    
 }
 
 
