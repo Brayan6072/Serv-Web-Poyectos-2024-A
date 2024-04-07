@@ -1,4 +1,6 @@
 ControladorReporte\AccionReporte.class
+ModeloReporte\SendMail$1.class
 ModeloReporte\MdReportes.class
 ControladorReporte\Conexion.class
 ModeloReporte\Reporte.class
+ModeloReporte\SendMail.class
