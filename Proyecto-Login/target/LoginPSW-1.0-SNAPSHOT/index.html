@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Agrega aquí los enlaces a hojas de estilo personalizadas si es necesario -->
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('https://source.unsplash.com/random') no-repeat center center/cover;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+        }
+
+        .text-center {
+            text-align: center; /* Ajuste para centrar el texto */
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px; /* Mayor separación desde arriba */
+        }
+
+        .btn-container .btn {
+            border-radius: 30px;
+            font-size: 16px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            border: none;
+            display: inline-block;
+            margin-right: 10px; /* Ajuste de separación entre botones */
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            color: #fff;
+        }
+
+        .btn:hover {
+            filter: brightness(90%);
+        }
+
+        /* Animación de escritura */
+        .typing-animation {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 0;
+            animation: typing 4s steps(40, end) forwards;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        /* Ajustes de tamaño para el texto "Bienvenido" */
+        h1 {
+            font-size: 3em; /* Tamaño aumentado */
+            margin-bottom: 20px; /* Espacio adicional debajo del texto */
+        }
+
+        /* Ajuste de centrado vertical y horizontal para el contenido */
+        .centered-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="centered-content"> <!-- Se envuelve el contenido en un div con clase centered-content -->
+                    <div class="text-center">
+                        <h1>
+                            <span class="typing-animation"> Bienvenido</span>
+                        </h1>
+                        <p class="mb-4">  Elige una opción:</p> <!-- Agregamos una clase de margen inferior -->
+                        <div class="btn-container">
+                            <a href="vistas/registro.jsp" class="btn btn-primary">Registrarse Aqui</a>
+                            <a href="vistas/login.jsp" class="btn btn-success">Iniciar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

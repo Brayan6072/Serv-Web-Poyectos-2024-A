@@ -1,0 +1,6 @@
+com\mycompany\util\DBUtil.class
+com\mycompany\proyecto\login\resources\JakartaEE10Resource.class
+modelos\User.class
+com\mycompany\proyecto\login\JakartaRestConfiguration.class
+controladores\RegistroServlet.class
+controladores\LoginServlet.class
