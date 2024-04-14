@@ -16,13 +16,30 @@ function getRandomPercentage() {
   return (Math.random() * 100).toFixed(2);
 }
 
+function grafica(tpbt){
+    var tpbte = document.getElementById('TpBt');
+    
+     while (tpbte.firstChild) {
+        tpbte.removeChild(tpbte.firstChild);
+    }
+    
+    for (var i = 0; i < tpbt.length; i++) {
+        var nwop = document.createElement('option');
+        nwop.value = tpbt[i];
+        nwop.innerHTML=tpbt[i];
+        tpbte.appendChild(nwop);
+    }
+   
+    
+}
 
-function mostrarCuadroTexto(texto, imagenes, informacionAdicional, bote) {
+function mostrarCuadroTexto(texto, imagenes, informacionAdicional, bote, ubicacion) {
   var cuadroTexto = document.getElementById('cuadroTexto');
   var cuadroreporte = document.getElementById('cuadroreporte');
   var textoCuadro = document.getElementById('textoCuadro');
   var imagenCuadro = document.getElementById('imagenCuadro');
   var informacionCuadro = document.getElementById('informacionCuadro');
+  var Eubicacion =document.getElementById('ub');
   
   textoCuadro.innerHTML = texto;
   imagenCuadro.innerHTML = '';
@@ -45,11 +62,15 @@ function mostrarCuadroTexto(texto, imagenes, informacionAdicional, bote) {
         nuevaImagen.style.width = '25%'; 
         nuevaImagen.style.height = '25%';           
         cuadroreporte.style.display = 'block';
+         Eubicacion.name="EtiquetaU";
+        Eubicacion.value=ubicacion;
+        Eubicacion.innerHTML = ubicacion;
         document.getElementById("imagenCuadro").href = "Others/Infografias.pdf";
+       
       }
       imagenCuadro.appendChild(nuevaImagen);  
   }
-  
+
   informacionCuadro.innerHTML = informacionAdicional; 
   cuadroTexto.style.display = 'block';
   
@@ -61,7 +82,9 @@ function ocultarCuadroTexto() {
     var cuadroreporte = document.getElementById('cuadroreporte');
     cuadroTexto.style.display = 'none';
     cuadroreporte.style.display = 'none';
+    
 }
+
 
 
 var contenedor = document.getElementById('main_container');

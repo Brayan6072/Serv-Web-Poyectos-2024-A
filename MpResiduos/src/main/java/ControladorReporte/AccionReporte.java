@@ -7,6 +7,9 @@ package ControladorReporte;
 import ModeloReporte.Reporte;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class AccionReporte {
@@ -17,14 +20,15 @@ public class AccionReporte {
             try{
                 
                 Connection con = Conexion.getConnection();
-                String ins = "INSERT INTO `notificaciones`.`reportes` (`Fecha`, `EtiquetaU`, `Hora`, `Id_Bote`) VALUES  (?,?,?,?);";
+                String ins = "INSERT INTO `notificaciones`.`reportes` (`Fecha`, `EtiquetaU`, `Hora`, `EstdBote`, `Clasificacion`) VALUES (?,?,?,?,?);";
                 PreparedStatement ps = con.prepareStatement(ins);
                 
                 
                 ps.setString(1, rp.getFecha());
-                ps.setString(2, rp.getEtiquetaU());
+                ps.setString(2, rp.getEtiquetau());
                 ps.setString(3, rp.getHora());
-                ps.setInt(4, rp.getId_estado());
+                ps.setString(4, rp.getEstado());
+                ps.setString(5, rp.getClasificacion());
               
                 
                 estatus = ps.executeUpdate();
@@ -37,4 +41,38 @@ public class AccionReporte {
             }
             return estatus;
         }       
+    
+    
+    public static List<Reporte>VerReporte(){
+                List<Reporte> lista = new ArrayList <Reporte>();                
+                 
+                try{
+
+                    Connection con = Conexion.getConnection();
+                    String consult = "select *from reportes";
+                    PreparedStatement ps = con.prepareStatement(consult);                   
+
+                    ResultSet  rs= ps.executeQuery();
+                    
+                    while(rs.next()){
+                        Reporte rpt = new Reporte();
+                        rpt.setId(rs.getInt(1));
+                        rpt.setFecha(rs.getString(2));
+                        rpt.setEtiquetau(rs.getString(3));
+                        rpt.setHora(rs.getString(4));
+                        rpt.setEstado(rs.getString(5));
+                        rpt.setClasificacion(rs.getString(6));
+                        lista.add(rpt);
+                    }
+                    
+                    System.out.println("Estos son todos los reportes");
+                    con.close();
+                    
+                }catch(Exception ed){
+                    System.out.println("Error al Consultar");
+                    System.out.println(ed.getMessage());
+                }
+               return   lista;         
+        }
+
 }

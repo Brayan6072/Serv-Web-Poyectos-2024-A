@@ -5,6 +5,7 @@
 package ModeloReporte;
 
 import ControladorReporte.AccionReporte;
+import static ModeloReporte.SendMail.sendEmail;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import javax.mail.MessagingException;
 
 /**
  *
@@ -50,24 +52,34 @@ public class MdReportes extends HttpServlet {
                  String time = horaFormateada;
                  String estado = request.getParameter("Estado");
                  String etiqueta = request.getParameter("EtiquetaU");
-                 int ide =0;
-                if("Lleno".equals(estado)){
-                    ide = 1;
-                }
+                 String tpb = request.getParameter("TpBts");
                 
-          
+            
+                
+         
           Reporte rpt = new Reporte();
            
-            
+         
                    
             rpt.setFecha(date);
             rpt.setHora(time);           
-            rpt.setEtiquetaU(etiqueta); 
-            rpt.setId_estado(ide);
+            rpt.setEtiquetau(etiqueta); 
+            rpt.setEstado(estado);
+            rpt.setClasificacion(tpb);
+            System.out.println(tpb);
             
             int estatus = AccionReporte.IngresarReporte(rpt);
             
             if(estatus > 0){                
+                SendMail correo = new SendMail();               
+                
+                 try {
+                     correo.sendEmail("brayan.delgado6072@alumnos.udg.mx", "Reporte de " + etiqueta, "Bote de "+tpb+" se encuentra "+estado);
+           
+                } catch (MessagingException e) {
+                    e.printStackTrace();
+                }
+                 
                 response.sendRedirect("Mapeo/Index.jsp"); 
                 
             }else{                

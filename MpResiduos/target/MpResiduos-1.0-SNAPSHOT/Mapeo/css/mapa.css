@@ -41,22 +41,8 @@ body{
     position: relative;
 }
 
-#cuadroreporte, a{
-    width: 5%;
-    height: 7%;
-    background-color: transparent;
-    border: transparent;
-    right: 0px;
-    justify-items: center;
-    align-items: center;
-    padding: 0;
-    border-radius: 0;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0);
 
-}
-#informacionCuadro{
-    padding-top: 10px;
-}
+
 
 #svg-container {
     position: relative;
@@ -65,12 +51,21 @@ body{
 }
 
 .point {
+    
     cursor: pointer;
     transition: fill 0.5s ease;
-    
+   
 }
 
 .closest {
     fill: rgb(255, 195, 0) !important;
    
+}
+#cuadroreporte{
+    right: 0;
+    width: auto;
+    
+}
+form{
+    display: grid;
 }
