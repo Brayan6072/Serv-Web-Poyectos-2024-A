@@ -52,9 +52,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 -- Volcando datos para la tabla notificaciones.usuarios: ~3 rows (aproximadamente)
 INSERT INTO `usuarios` (`Id`, `Nombre`, `Email`, `Telefono`, `Password`, `TpUser`, `Estado`) VALUES
-	(1, 'Brayan6072', 'brayan.delgado6072@alumnos.udg.mx', 123456789, '123456', 'Encargado', 'Activo'),
-	(2, 'Brayan ', 'ben10delgado@gmail.com', 123456, '123', 'Encargado', 'Activo'),
-	(3, 'Brayan1', 'brayandelgadodiaz03@gmail.com', 12316546, '123', 'Encargado', 'Activo');
+	(1, 'Brayan6072', 'brayan.delgado6072@alumnos.udg.mx', 123456789, '123456', 'Encargado', 'Activo'),	
+	(2, 'Brayan1', 'brayandelgadodiaz03@gmail.com', 12316546, '123', 'Encargado', 'Activo');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
