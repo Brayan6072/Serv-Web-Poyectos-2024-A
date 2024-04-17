@@ -20,6 +20,10 @@
         <servlet-name>EliminarU</servlet-name>
         <servlet-class>ModeloLogin.EliminarU</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>BrReporte</servlet-name>
+        <servlet-class>ModeloReporte.BrReporte</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>MdReportes</servlet-name>
         <url-pattern>/MdReportes</url-pattern>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>EliminarU</servlet-name>
         <url-pattern>/EliminarU</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BrReporte</servlet-name>
+        <url-pattern>/BrReporte</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

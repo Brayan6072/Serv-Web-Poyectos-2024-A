@@ -20,7 +20,10 @@ public class AccionUsuarios {
             try{
                 
                 Connection con = Conexion.getConnection();
-                String ins = "INSERT INTO `notificaciones`.`usuarios` (`Nombre`, `Email`, `Telefono`, `Password`, `TpUser`, Estado) VALUES (?,?,?,?,?,?);";
+                String ins = "INSERT INTO `notificaciones`.`usuarios` (`Nombre`, `Email`, `Telefono`, `Password`, `TpUser`, Estado) " +
+                     "SELECT ?, ?, ?, ?, ?, ? WHERE NOT EXISTS (" +
+                     "SELECT 1 FROM `notificaciones`.`usuarios` " +
+                     "WHERE `Email` = ? AND `TpUser` = ? AND `Estado` = ?);";
                 PreparedStatement ps = con.prepareStatement(ins);
                 
                 
@@ -29,9 +32,12 @@ public class AccionUsuarios {
                 ps.setInt(3, us.getTelefono());
                 ps.setString(4, us.getPassword());
                 ps.setString(5, us.getTpuser());                         
-                ps.setString(6, us.getEstado());
-
+                ps.setString(6, us.getEstado());                
                 
+               
+                ps.setString(7, us.getEmail());
+                ps.setString(8, us.getTpuser());                         
+                ps.setString(9, us.getEstado());
                 
                 estatus = ps.executeUpdate();
                 System.out.println("Se ha insertado correctamente");

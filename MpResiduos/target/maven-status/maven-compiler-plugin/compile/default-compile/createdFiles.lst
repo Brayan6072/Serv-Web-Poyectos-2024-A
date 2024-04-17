@@ -1,12 +1,13 @@
-ControladorReporte\AccionReporte.class
-ModeloLogin\ActualizarU.class
 ModeloReporte\SendMail$1.class
 ModeloLogin\ValidarUs.class
+ModeloReporte\SendMail.class
+ModeloLogin\InsertarU.class
+ControladorReporte\AccionReporte.class
+ModeloLogin\ActualizarU.class
 ControladorReporte\Conexion.class
 ModeloReporte\Reporte.class
 ModeloLogin\Usuarios.class
-ModeloReporte\SendMail.class
 ControladorReporte\AccionUsuarios.class
-ModeloLogin\InsertarU.class
+ModeloReporte\BrReporte.class
 ModeloReporte\MdReportes.class
 ModeloLogin\EliminarU.class

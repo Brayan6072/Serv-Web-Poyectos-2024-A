@@ -49,7 +49,9 @@
                             <th>Hora</th>
                             <th>Clasificacion</th>     
                             <th>Estado</th>
-                            <th>Ubicacion</th>                
+                            <th>Ubicacion</th>      
+                            <th>Estatus</th>     
+                            
                             
                         </tr>
                     </thead>
@@ -65,6 +67,13 @@
                             <td><%=rpt.getClasificacion()%></td>
                             <td><%=rpt.getEstado()%></td>
                             <td><%=rpt.getEtiquetau()%></td>
+                            <td>
+                                <form action="/MpResiduos/BrReporte" method="post">
+                                    <input type="hidden" name="idReporte" value="<%= rpt.getId() %>" />
+                                    <button type="submit" name="action" value="completar">Completar</button>
+                                </form>
+                                
+                               </td>
                         </tr>
                         <%
                             }

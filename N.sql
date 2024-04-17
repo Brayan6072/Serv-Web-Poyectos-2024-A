@@ -27,16 +27,11 @@ CREATE TABLE IF NOT EXISTS `reportes` (
   `Hora` time DEFAULT NULL,
   `EstdBote` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `Clasificacion` varchar(50) DEFAULT NULL,
+  `Estatus` varchar(50) DEFAULT 'En proceso',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Volcando datos para la tabla notificaciones.reportes: ~1 rows (aproximadamente)
-INSERT INTO `reportes` (`Id`, `Fecha`, `EtiquetaU`, `Hora`, `EstdBote`, `Clasificacion`) VALUES
-	(1, '2024-04-14', 'Bote B', '13:22:13', 'Lleno', 'Plasticos'),
-	(2, '2024-04-14', 'Bote O', '20:59:20', 'Lleno', 'Metal'),
-	(3, '2024-04-14', 'Bote T', '20:59:26', 'Basura Mezclada', 'Metal'),
-	(4, '2024-04-14', 'Bote M', '20:59:30', 'Basura Mezclada', 'Papel'),
-	(5, '2024-04-14', 'Bote J', '21:19:14', 'Lleno', 'Papel');
+-- Volcando datos para la tabla notificaciones.reportes: ~11 rows (aproximadamente)
 
 -- Volcando estructura para tabla notificaciones.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
@@ -48,12 +43,13 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `TpUser` varchar(80) DEFAULT NULL,
   `Estado` varchar(50) DEFAULT 'Activo',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Volcando datos para la tabla notificaciones.usuarios: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla notificaciones.usuarios: ~2 rows (aproximadamente)
 INSERT INTO `usuarios` (`Id`, `Nombre`, `Email`, `Telefono`, `Password`, `TpUser`, `Estado`) VALUES
-	(1, 'Brayan6072', 'brayan.delgado6072@alumnos.udg.mx', 123456789, '123456', 'Encargado', 'Activo'),	
-	(2, 'Brayan1', 'brayandelgadodiaz03@gmail.com', 12316546, '123', 'Encargado', 'Activo');
+	(1, 'Brayan6072', 'brayan.delgado6072@alumnos.udg.mx', 123456789, '123456', 'Encargado', 'Activo'),
+	(3, 'Brayan1', 'brayandelgadodiaz03@gmail.com', 12316546, '123', 'Encargado', 'Activo'),
+	(5, 'Brayan ', 'AA@gmai.com', 123456, '123131213121', 'encargado', 'Activo');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

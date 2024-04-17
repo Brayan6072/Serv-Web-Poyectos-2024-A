@@ -56,23 +56,23 @@ public class MdReportes extends HttpServlet {
                  String estado = request.getParameter("Estado");
                  String etiqueta = request.getParameter("EtiquetaU");
                  String tpb = request.getParameter("TpBts");
-                
+                 String est = "En proceso";
+                int estatus = 0;             
+                Reporte rpt = new Reporte();          
+                            
+                rpt.setFecha(date);
+                rpt.setHora(time);           
+                rpt.setEtiquetau(etiqueta); 
+                rpt.setEstado(estado);
+                rpt.setClasificacion(tpb);
+                rpt.setEstatus(est);
+                System.out.println(tpb);   
+                                    
+                                    
+                estatus = AccionReporte.IngresarReporte(rpt);
+                        
             
-                
-         
-          Reporte rpt = new Reporte();
-           
-         
-                   
-            rpt.setFecha(date);
-            rpt.setHora(time);           
-            rpt.setEtiquetau(etiqueta); 
-            rpt.setEstado(estado);
-            rpt.setClasificacion(tpb);
-            System.out.println(tpb);
-            
-            int estatus = AccionReporte.IngresarReporte(rpt);
-            
+            System.out.println(estatus);   
             if(estatus > 0){                
                 SendMail correo = new SendMail();               
                 

@@ -20,16 +20,25 @@ public class AccionReporte {
             try{
                 
                 Connection con = Conexion.getConnection();
-                String ins = "INSERT INTO `notificaciones`.`reportes` (`Fecha`, `EtiquetaU`, `Hora`, `EstdBote`, `Clasificacion`) VALUES (?,?,?,?,?);";
+                String ins = "INSERT INTO `notificaciones`.`reportes` (`Fecha`, `EtiquetaU`, `Hora`, `EstdBote`, `Clasificacion`, `Estatus`) " +
+                     "SELECT ?, ?, ?, ?, ?, ? WHERE NOT EXISTS (" +
+                     "SELECT 1 FROM `notificaciones`.`reportes` " +
+                     "WHERE `EtiquetaU` = ? AND `EstdBote` = ? AND `Clasificacion` = ? AND `Estatus` = ?);";
+
                 PreparedStatement ps = con.prepareStatement(ins);
-                
-                
+
                 ps.setString(1, rp.getFecha());
                 ps.setString(2, rp.getEtiquetau());
                 ps.setString(3, rp.getHora());
                 ps.setString(4, rp.getEstado());
                 ps.setString(5, rp.getClasificacion());
-              
+                ps.setString(6, rp.getEstatus());
+                // Subconsulta para validar
+                ps.setString(7, rp.getEtiquetau());
+                ps.setString(8, rp.getEstado());
+                ps.setString(9, rp.getClasificacion());
+                ps.setString(10, rp.getEstatus());
+
                 
                 estatus = ps.executeUpdate();
                 System.out.println("Se ha insertado correctamente");
@@ -75,4 +84,29 @@ public class AccionReporte {
                return   lista;         
         }
 
+    
+    
+    
+    public static int BorrarReportes(int id){
+            
+            int estatus = 0;
+            
+            try{
+                
+                Connection con = Conexion.getConnection();
+                String dlt = "DELETE FROM `notificaciones`.`reportes` WHERE  `Id`=?;";
+                PreparedStatement ps = con.prepareStatement(dlt);
+                
+                ps.setInt(1, id);
+                
+                estatus = ps.executeUpdate();
+                System.out.println("Se ha borrado correctamente");
+                con.close();
+                
+            }catch(Exception ed){
+                System.out.println("Error al Insertar");
+                System.out.println(ed.getMessage());
+            }
+            return estatus;
+        }    
 }
