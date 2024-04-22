@@ -17,7 +17,14 @@
         <script src="../js/scripts.js"></script>
         <title>JSP Page</title>
     </head>
-    <body>      
+    <body>    
+        
+        <% if (session.getAttribute("usuarioLogueado") != null) { %>
+            
+        <% } else { %>
+            
+            <script>window.location.href = "../Index.jsp";</script>
+        <% } %>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                     <div class="container">
                         <p tabindex="1" aria-label="Titulo de la pagina" class="navbar-brand" href="#">Reportes de Botes</p>
@@ -26,11 +33,12 @@
                             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
                                 <li class="nav-item dropdown">
-                                    <a tabindex="2" aria-label="Menu desplegable" class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Regresar</a>
+                                    <a tabindex="2" aria-label="Menu desplegable" class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                                        <li><a class="dropdown-item" href="../Index.jsp">Mapa</a></li>
                                         
+                                        <li><a class="dropdown-item" href="Historial.jsp">Historial</a></li>
+                                        <li><a class="dropdown-item" href="<%=request.getContextPath()%>/CerrarSesionServlet">Cerrar Sesión</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -49,7 +57,10 @@
                             <th>Hora</th>
                             <th>Clasificacion</th>     
                             <th>Estado</th>
-                            <th>Ubicacion</th>                
+                            <th>Ubicacion</th>    
+                            <th>Estatus</th>
+                            <th>Progreso</th>     
+                            
                             
                         </tr>
                     </thead>
@@ -65,6 +76,25 @@
                             <td><%=rpt.getClasificacion()%></td>
                             <td><%=rpt.getEstado()%></td>
                             <td><%=rpt.getEtiquetau()%></td>
+                            <td><div id="semaforo" class="luz" style="<% if(rpt.getEstatus().equals("rojo")) { 
+                                out.print("background-color: red;");
+                            } else if(rpt.getEstatus().equals("naranja")) { 
+                                out.print("background-color: orange;");
+                            } else if(rpt.getEstatus().equals("verde")) { 
+                                out.print("background-color: green;");
+                            } %>">
+                             </div>
+                            </td>
+                            <td>
+                                <form action="/MpResiduos/BrReporte" method="post">
+                                    
+                                    <input type="hidden" name="idReporte" value="<%= rpt.getId() %>" />                                    
+                                    <input type="hidden" name="estReporte" value="<%=rpt.getEstatus()%>"/>                 
+                                    
+                                    <button type="submit" name="action" value="procesar">Procesar</button>
+                                </form>
+                                
+                               </td>
                         </tr>
                         <%
                             }

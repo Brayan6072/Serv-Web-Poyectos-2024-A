@@ -23,7 +23,7 @@ body{
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       margin: 0px;
       width: 27%;      
-      z-index: 3;
+      z-index: 400;
       bottom: 0px;
   }
 
@@ -68,4 +68,8 @@ body{
 }
 form{
     display: grid;
+}
+#imagenCuadro{
+    margin-bottom: 5%;
+    margin-top: 5%;
 }

@@ -5,6 +5,8 @@
 package ModeloReporte;
 
 import ControladorReporte.AccionReporte;
+import ControladorReporte.AccionUsuarios;
+import ModeloLogin.Usuarios;
 import static ModeloReporte.SendMail.sendEmail;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -16,12 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 import javax.mail.MessagingException;
 
-/**
- *
- * @author ben10
- */
 
 public class MdReportes extends HttpServlet {
 
@@ -53,29 +52,33 @@ public class MdReportes extends HttpServlet {
                  String estado = request.getParameter("Estado");
                  String etiqueta = request.getParameter("EtiquetaU");
                  String tpb = request.getParameter("TpBts");
-                
+                 String est = "rojo";
+                 
+                 
+                int estatus = 0;             
+                Reporte rpt = new Reporte();          
+                            
+                rpt.setFecha(date);
+                rpt.setHora(time);           
+                rpt.setEtiquetau(etiqueta); 
+                rpt.setEstado(estado);
+                rpt.setClasificacion(tpb);
+                rpt.setEstatus(est);
+                System.out.println(tpb);   
+                                    
+                                    
+                estatus = AccionReporte.IngresarReporte(rpt);
+                        
             
-                
-         
-          Reporte rpt = new Reporte();
-           
-         
-                   
-            rpt.setFecha(date);
-            rpt.setHora(time);           
-            rpt.setEtiquetau(etiqueta); 
-            rpt.setEstado(estado);
-            rpt.setClasificacion(tpb);
-            System.out.println(tpb);
-            
-            int estatus = AccionReporte.IngresarReporte(rpt);
-            
+            System.out.println(estatus);   
             if(estatus > 0){                
                 SendMail correo = new SendMail();               
                 
                  try {
-                     correo.sendEmail("brayan.delgado6072@alumnos.udg.mx", "Reporte de " + etiqueta, "Bote de "+tpb+" se encuentra "+estado);
-           
+                      List<Usuarios> lista = AccionUsuarios.ConsultarUsuarios();
+                            for(Usuarios us : lista){
+                               correo.sendEmail(us.getEmail(), "Reporte de " + etiqueta, "Bote de "+tpb+" se encuentra "+estado);
+                            }
                 } catch (MessagingException e) {
                     e.printStackTrace();
                 }

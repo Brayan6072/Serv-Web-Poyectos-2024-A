@@ -26,7 +26,7 @@ public class SendMail {
 
         // Credenciales de la cuenta de correo
         final String myAccountEmail = "brayandelgadodiaz03@gmail.com";
-        final String password = "**** **** ****";
+        final String password = "musp unqe epft mfma";
 
         // Crear una sesión con autenticación
         Session session = Session.getInstance(properties, new Authenticator() {

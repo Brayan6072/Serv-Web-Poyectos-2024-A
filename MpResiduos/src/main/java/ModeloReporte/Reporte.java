@@ -4,10 +4,6 @@
  */
 package ModeloReporte;
 
-/**
- *
- * @author ben10
- */
 public class Reporte {
     private int id;
           private String fecha;
@@ -15,16 +11,18 @@ public class Reporte {
           private String estado;
           private String etiquetau;
           private String clasificacion;
+          private String estatus;
           
    public Reporte (){}    
 
-    public Reporte(int id, String fecha, String hora, String estado, String etiquetau, String clasificacion) {
+    public Reporte(int id, String fecha, String hora, String estado, String etiquetau, String clasificacion, String estatus) {
         this.id = id;
         this.fecha = fecha;
         this.hora = hora;
         this.estado = estado;
         this.etiquetau = etiquetau;
         this.clasificacion = clasificacion;
+        this.estatus = estatus;
     }
 
     public int getId() {
@@ -74,6 +72,16 @@ public class Reporte {
     public void setClasificacion(String clasificacion) {
         this.clasificacion = clasificacion;
     }
+
+    public String getEstatus() {
+        return estatus;
+    }
+
+    public void setEstatus(String estatus) {
+        this.estatus = estatus;
+    }
+
+    
 
  
 
