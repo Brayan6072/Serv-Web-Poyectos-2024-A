@@ -7,6 +7,7 @@ package ModeloLogin;
 import ControladorReporte.AccionUsuarios;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,7 +45,11 @@ public class ValidarUs extends HttpServlet {
                   
                
             }else{                
-                response.sendRedirect("Mapeo/Login.jsp");     
+                 String err = "El usuario y contraseña podrian no ser correctos";
+                request.setAttribute("mensaje", err);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Mapeo/Errores.jsp");
+                dispatcher.forward(request, response);
+                 return;     
             }
         }
     }

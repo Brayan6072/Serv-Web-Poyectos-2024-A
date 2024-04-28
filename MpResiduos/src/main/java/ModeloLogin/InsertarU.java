@@ -7,6 +7,7 @@ package ModeloLogin;
 import ControladorReporte.AccionUsuarios;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -54,9 +55,16 @@ public class InsertarU extends HttpServlet {
 
                if (estatus > 0) {
                    response.sendRedirect("Mapeo//VistaLogin/Login.jsp");
+                   
+                   
                } else {
                    // Mejora: enviar mensaje a través de la redirección
-                   response.sendRedirect("error.jsp?message=Error%20al%20insertar%20usuario");
+                    String err = "Ya existe un usuario con los mismos datos";
+                    request.setAttribute("mensaje", err);
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("Mapeo/Errores.jsp");
+                    dispatcher.forward(request, response);
+                 return; 
+                   
                }
            } catch (NumberFormatException e) {
                // Mejora: enviar mensaje a través de la redirección

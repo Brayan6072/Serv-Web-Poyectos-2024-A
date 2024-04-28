@@ -91,7 +91,7 @@
                                     <input type="hidden" name="idReporte" value="<%= rpt.getId() %>" />                                    
                                     <input type="hidden" name="estReporte" value="<%=rpt.getEstatus()%>"/>                 
                                     
-                                    <button type="submit" name="action" value="procesar">Procesar</button>
+                                    <button type="submit" name="action" value="procesar">Atender</button>
                                 </form>
                                 
                                </td>

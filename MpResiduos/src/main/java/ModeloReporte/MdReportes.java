@@ -20,6 +20,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.mail.MessagingException;
+import javax.servlet.RequestDispatcher;
 
 
 public class MdReportes extends HttpServlet {
@@ -86,7 +87,12 @@ public class MdReportes extends HttpServlet {
                 response.sendRedirect("Mapeo/Index.jsp"); 
                 
             }else{                
-                response.sendRedirect("<p>Error</p>");     
+                
+                String err = "Probablemente otra persona ya realizó el reporte";
+                request.setAttribute("mensaje", err);
+                RequestDispatcher dispatcher = request.getRequestDispatcher("Mapeo/Errores.jsp");
+                dispatcher.forward(request, response);
+                 return; 
             }
 
         }
